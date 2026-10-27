@@ -1,0 +1,46 @@
+name: Bug or crash
+description: Something broke, froze, crashed or saved the wrong thing
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Velum version
+      description: Settings in Velum, or the APK file name
+      placeholder: 0.1.1
+    validations:
+      required: true
+  - type: input
+    id: oneui
+    attributes:
+      label: One UI version
+      description: Settings > About phone > Software information
+      placeholder: One UI 8.0
+    validations:
+      required: true
+  - type: input
+    id: mode
+    attributes:
+      label: Mode and lens
+      placeholder: Photo, 3x, Rangefinder > Authentic
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen again
+      placeholder: |
+        1. Open Movie
+        2. Tap the subject
+        3. ...
+  - type: textarea
+    id: files
+    attributes:
+      label: Screenshots, photos or a screen recording
+      description: Drag files here. Photos with location data should have it removed first.

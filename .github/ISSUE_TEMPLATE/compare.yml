@@ -1,0 +1,42 @@
+name: Photo comparison with Samsung Camera
+description: Same scene, Samsung Camera vs Velum. The most useful feedback there is.
+labels: [image-quality]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Take the same scene with both apps, same lens, phone as still as you can. Upload the original files if you
+        can (GitHub keeps them full size inside a .zip). Please remove location data from photos first.
+  - type: input
+    id: version
+    attributes:
+      label: Velum version and One UI version
+      placeholder: 0.1.1, One UI 8.0
+    validations:
+      required: true
+  - type: dropdown
+    id: scene
+    attributes:
+      label: Scene
+      options: [Daylight, Backlit / sunset, Indoor, Low light / night, People / portrait, Night sky / Astro, Moving subject, Other]
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Lens, mode and look used in Velum
+      placeholder: 1x, Photo, no look
+    validations:
+      required: true
+  - type: textarea
+    id: photos
+    attributes:
+      label: Photos
+      description: Samsung first, then Velum.
+    validations:
+      required: true
+  - type: textarea
+    id: opinion
+    attributes:
+      label: Which is better, and why?
+      description: Colour, detail, noise, skin, sharpness, anything. "Samsung looks better" is useful too.
